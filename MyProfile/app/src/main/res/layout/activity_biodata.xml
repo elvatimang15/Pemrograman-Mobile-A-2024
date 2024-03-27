@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BiodataActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background2" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BIODATA"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:textSize="35dp"
+        android:layout_marginTop="18dp"
+        android:id="@+id/judul" />
+
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="wrap_content"
+        android:layout_height="255dp"
+        android:layout_below="@+id/judul"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="300dp"
+        android:src="@drawable/foto" />
+
+    <ImageButton
+        android:id="@+id/lokasi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/judul"
+        android:layout_marginTop="280dp"
+        android:layout_marginLeft="25dp"
+        android:background="@drawable/location"
+        android:onClick="lokasi"/>
+
+    <ImageButton
+        android:id="@+id/tlpon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/judul"
+        android:layout_marginTop="280dp"
+        android:layout_marginLeft="60dp"
+        android:background="@drawable/telepon"
+        android:onClick="telepon"/>
+
+    <ImageButton
+        android:id="@+id/galeri"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/judul"
+        android:layout_marginTop="280dp"
+        android:layout_marginLeft="95dp"
+        android:background="@drawable/galeri"
+        android:onClick="fotofoto"/>
+
+    <TextView
+        android:id="@+id/nama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lokasi"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="25dp"
+        android:text="Nama : Elva Aprili Timang"
+        android:textSize="18dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/nim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nama"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="25dp"
+        android:text="NIM : H071221076"
+        android:textSize="18dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/paragraf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nim"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="120dp"
+        android:gravity="center"
+        android:text="Saat ini saya sedang menempuh pendidikan S1 dan menjadi bagian dari angkatan 2022 program studi Sistem Informasi di Universitas Hasanuddin."
+        android:textSize="15dp" />
+
+</RelativeLayout>
