@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/judul"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hitung Cadangan Mineral Nikel"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:background="#BF8B57"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:id="@+id/luas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Luas Penyebaran (km2) :"
+        android:layout_below="@+id/judul"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/et1"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/judul"
+        android:layout_marginLeft="180dp"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/tebal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tebal (meter) :"
+        android:layout_below="@+id/luas"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="20dp"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/et2"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et1"
+        android:layout_marginLeft="180dp"/>
+
+    <TextView
+        android:id="@+id/kadar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kadar Ni (%) :"
+        android:layout_below="@+id/tebal"
+        android:layout_marginTop="28dp"
+        android:layout_marginLeft="20dp"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/et3"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et2"
+        android:layout_marginLeft="180dp"/>
+
+    <Button
+        android:id="@+id/btn_hitung"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Hitung"
+        android:layout_below="@id/et3"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="#7F5539"
+        android:layout_marginLeft="2dp"/>
+
+    <Button
+        android:id="@+id/btn_delete"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Hapus"
+        android:layout_below="@id/et3"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="#7F5539"
+        android:layout_toRightOf="@id/btn_hitung"
+        android:layout_marginLeft="8dp"/>
+
+    <TextView
+        android:id="@+id/volume"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Volume Endapan:"
+        android:textStyle="bold"
+        android:layout_below="@id/btn_hitung"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/hasilvolume"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/volume"
+        android:layout_marginTop="7dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:text="-"/>
+
+    <TextView
+        android:id="@+id/cadangan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cadangan Mineral Nikel:"
+        android:textStyle="bold"
+        android:layout_below="@id/hasilvolume"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"/>
+
+    <TextView
+        android:id="@+id/hasilcadangan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cadangan"
+        android:layout_marginTop="7dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:text="-"/>
+
+    <TextView
+        android:id="@+id/namanim"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="elva_timang"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:background="#8E5E2F"
+        android:textColor="@color/white"
+        android:layout_alignParentBottom="true"/>
+
+
+</RelativeLayout>
