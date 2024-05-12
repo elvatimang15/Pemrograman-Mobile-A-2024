@@ -1,11 +1,13 @@
 package com.example.matematikageologi;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -45,21 +47,47 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void hitungCadangan() {
-        // Ambil nilai dari EditText
-        double luas = Double.parseDouble(etLuas.getText().toString());
-        double tebal = Double.parseDouble(etTebal.getText().toString());
-        double kadarNi = Double.parseDouble(etKadar.getText().toString());
+        try {
+            // Ambil nilai dari EditText
+            double luas = Double.parseDouble(etLuas.getText().toString());
+            double tebal = Double.parseDouble(etTebal.getText().toString());
+            double kadarNi = Double.parseDouble(etKadar.getText().toString());
 
-        // Hitung volume endapan
-        double volumeEndapan = luas * tebal;
+            // Validasi input
+            if (luas <= 0 || tebal <= 0 || kadarNi < 0 || kadarNi > 100) {
+                // Jika input tidak valid, tampilkan pesan kesalahan
+                showErrorAlert("Masukkan angka yang valid");
+                return;
+            }
 
-        // Hitung cadangan mineral nikel
-        double cadanganNikel = volumeEndapan * (kadarNi / 100);
+            // Hitung volume endapan
+            double volumeEndapan = luas * tebal;
 
-        // Tampilkan hasil pada TextView
-        tvHasilVolume.setText(String.format("%.2f m3", volumeEndapan));
-        tvHasilCadangan.setText(String.format("%.2f m3", cadanganNikel));
+            // Hitung cadangan mineral nikel
+            double cadanganNikel = volumeEndapan * (kadarNi / 100);
+
+            // Tampilkan hasil pada TextView
+            tvHasilVolume.setText(String.format("%.2f m3", volumeEndapan));
+            tvHasilCadangan.setText(String.format("%.2f m3", cadanganNikel));
+        } catch (NumberFormatException e) {
+            // Jika input tidak valid (tidak bisa di-parse menjadi double), tampilkan pesan kesalahan
+            showErrorAlert("Masukkan angka yang valid");
+        }
     }
+
+    private void showErrorAlert(String message) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Error");
+        builder.setMessage(message);
+        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+        builder.show();
+    }
+
 
     private void resetInput() {
         // Reset nilai EditText dan TextView
