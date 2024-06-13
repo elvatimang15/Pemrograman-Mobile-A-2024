@@ -1,0 +1,32 @@
+name: h071221076_uiflutter
+description: A new Flutter project.
+publish_to: 'none' 
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.4.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/logounhas.png
+    - assets/avatar_elva.jpg
+    - assets/post_bunga.jpeg
+    - assets/post_satumapuluh.jpg
+    - assets/post_sisfo.jpg
+    - assets/post_ahhmantap.jpg
+    - assets/post_urra.jpg
+    - assets/post_aslab.jpg
+    - assets/post_byteminton.jpg
